@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "903723206240",
+    "project_id": "easychatlib",
+    "storage_bucket": "easychatlib.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903723206240:android:118a05059cb7b2bb43e505",
+        "android_client_info": {
+          "package_name": "com.danikoza.easychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903723206240-imhn3fck2v71393gojgjaohpnk7l0k6p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPWPTaQQcQ0-UI_MxLmGA3hCTHcKq5eQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903723206240-imhn3fck2v71393gojgjaohpnk7l0k6p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

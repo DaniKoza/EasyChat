@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EasyChat</string>
+    <string name="user_name">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="or_register"><u>Not Registered? Click Here</u></string>
+    <string name="login">Login</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="select_photo">SELECT PHOTO</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="new_message">New Message</string>
+</resources>
