@@ -9,7 +9,6 @@ import android.util.Log
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
-import androidx.core.widget.doOnTextChanged
 import com.danikoza.easychat.databinding.ActivityRegisterBinding
 import com.danikoza.easychat.models.User
 import com.google.firebase.auth.FirebaseAuth
