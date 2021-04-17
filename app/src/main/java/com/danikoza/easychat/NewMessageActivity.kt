@@ -1,22 +1,20 @@
 package com.danikoza.easychat
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.danikoza.easychat.databinding.ActivityNewMessageBinding
 import com.danikoza.easychat.items.UserItem
 import com.danikoza.easychat.models.User
 import com.google.firebase.database.*
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 import com.xwray.groupie.GroupieAdapter
 
 
 class NewMessageActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityNewMessageBinding
-    private lateinit var mDatabase: DatabaseReference
-    private lateinit var groupieAdapter:  GroupieAdapter
+    private lateinit var groupieAdapter: GroupieAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +24,20 @@ class NewMessageActivity : AppCompatActivity() {
 
         groupieAdapter = GroupieAdapter()
         populateAdapter()
-
         binding.recyclerviewNewmessage.adapter = groupieAdapter
+
+        groupieAdapter.setOnItemClickListener { item, view ->
+            val userItem = item as UserItem
+            val intent = Intent(this, ChatLogActivity::class.java)
+            intent.putExtra(USER_KEY, userItem.user)
+            startActivity(intent)
+            finish()
+        }
+
+
     }
 
     private fun populateAdapter() {
-        mDatabase = Firebase.database.reference
         val ref = FirebaseDatabase.getInstance().getReference("/users")
 
         val userListener = object : ValueEventListener {
@@ -50,5 +56,9 @@ class NewMessageActivity : AppCompatActivity() {
         }
 
         ref.addListenerForSingleValueEvent(userListener)
+    }
+
+    companion object {
+        val USER_KEY = "USER_KEY"
     }
 }
